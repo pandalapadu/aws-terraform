@@ -10,35 +10,32 @@ Instead of writing the same Terraform code again and again, we package it once a
 
 Why do we use modules?
 1.Reusability
-Write code once        
-Use it for dev, test, prod
+      Write code once        
+      Use it for dev, test, prod
 2.Consistency
-Same naming, same settings, fewer mistakes
+      Same naming, same settings, fewer mistakes
 3.Clean & readable code
-Main Terraform files stay small
-Complex logic lives inside modules
+      Main Terraform files stay small
+      Complex logic lives inside modules
 4.Team collaboration
-One team builds modules
-Others just use them
+      One team builds modules
+      Others just use them
 
 Terraform Modules explained using a Student Progress Card .
-Step 1: The problem (without modules)
-Imagine a school where:
-Every teacher designs their own progress card
-Different formats
-Different subjects order
-Different grading styles
-
+**Step 1: The problem (without modules)**
+Imagine a school where: Every teacher designs their own progress card
+                        Different formats
+                        Different subjects order
+                        Different grading styles
 Result:
-Confusion
-Inconsistency
-More mistakes
-Hard to compare students
-
+         Confusion
+         Inconsistency
+         More mistakes
+         Hard to compare students
 This is like writing Terraform code without modules — repeated, messy, and error-prone.
 Step 2: The solution (modules)
-The school decides: “We will create one standard progress card template and reuse it for every student.”
-That standard template = Terraform module
+   The school decides: “We will create one standard progress card template and reuse it for every student.”
+   That standard template = Terraform module
 
 | Student Progress Card      | Terraform Module     |
 | -------------------------- | -------------------- |
@@ -49,8 +46,8 @@ That standard template = Terraform module
 | Same card for all students | Reusable module      |
 
 Step 3: Inputs (Variables)
-Each student is different, but the format stays the same.
-For every student, we only change: Name= Student name  , Roll number: Student class num, Marks: Student marks
+   Each student is different, but the format stays the same.
+   For every student, we only change: Name= Student name  , Roll number: Student class num, Marks: Student marks
 Terraform : we only change : vnet_name , location, resource_group
 
 Step 4: Outputs :After filling the progress card, we get: Total marks, Grade , Pass/Fail
@@ -61,8 +58,10 @@ One progress card template can be used for:  Class 1 to Class 10, Any section, A
 Same way: One Terraform module Used for dev, test, prod Used by different teams as well .
 
 Step 6: Why this matters in real projects
-Without modules: Every student has a different card ❌ , Hard to maintain ❌
-With modules: Same structure for everyone ✅  ,Easy to update (change template once) ✅ ,Professional & scalable ✅
+   Without modules: Every student has a different card ❌ , Hard to maintain ❌
+   With modules: Same structure for everyone ✅  ,
+      Easy to update (change template once) ✅ ,
+      Professional & scalable ✅
 
 Folder structure for multiple environments
 terraform-azure/
