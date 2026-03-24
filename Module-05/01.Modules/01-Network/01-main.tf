@@ -2,7 +2,7 @@ resource "aws_vpc" "this" {
   cidr_block = var.vpc_cidr
 
   tags = {
-    Name = var.name
+    Name = "dev-vpc"
   }
 }
 
@@ -11,6 +11,6 @@ resource "aws_subnet" "this" {
   cidr_block = var.subnet_cidr
 
   tags = {
-    Name = "${var.name}-subnet"
+    Name = "dev-subnet"
   }
 }
