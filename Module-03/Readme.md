@@ -11,12 +11,12 @@ Module 3: State Management
 | `resource-group.tf`  | Resource group resource definition       |
 | `storage-account.tf` | Storage account resource definition      |
 | `local.tf`           | Local variables and computed values      |
-| `variables.tf`       | Input variable declarations              |
-| `terraform.tfvars`   | Input variable values overrides          |
+|        |
 | `output.tf`          | Output variables to expose resource info |
 
 ###########**implicit vs explicit** dependencies in Terraform ############
-**Implicit Dependency**:
+**Implicit Dependency**: `variables.tf`       | Input variable declarations              |
+| `terraform.tfvars`   | Input variable values overrides
 * Terraform automatically understands the order of resources based on references.
 * You don’t need to specify anything; Terraform uses the fact that one resource depends on another.
   Example:
