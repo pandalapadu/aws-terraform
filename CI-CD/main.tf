@@ -1,3 +1,12 @@
+terraform {
+  backend "s3" {
+    bucket         = "my-terraform-state-bucket-12345-venkat" ##when the name change modify it
+    key            = "network/terraform.tfstate"
+    region         = "ap-south-1"
+    dynamodb_table = "terraform-lock"
+  }
+}
+
 # Get available AZs
 data "aws_availability_zones" "available" {}
 
