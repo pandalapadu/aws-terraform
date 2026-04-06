@@ -6,7 +6,7 @@ business_division = "retail"
 # EKS Cluster
 cluster_name = "eksdemo"
 cluster_service_ipv4_cidr = "172.20.0.0/16"
-cluster_version = "1.34"
+cluster_version = "1.35"
 
 # EKS Cluster Access Control
 cluster_endpoint_private_access = false
